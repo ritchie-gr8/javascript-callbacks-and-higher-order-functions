@@ -3,9 +3,9 @@
 const hasScoreMoreThan70 = (score) => score > 70
 
 function createAtLeastFive() {
-  let roomCnt = 0; 
+  let roomCnt = 0;
 
-  return function atLeastFive(array, operation) {
+  return function atLeastFiveInner(array, operation) {
     roomCnt++;
 
     const isPassCnt = array.filter(operation).length;
@@ -24,7 +24,7 @@ const studentScoresRoom3 = [67, 80, 100, 15, 12, 40, 67, 80, 100, 67];
 // Using `atLeastFive` function here
 let scoreRoom1Result = atLeastFive(studentScoresRoom1, hasScoreMoreThan70);
 let scoreRoom2Result = atLeastFive(studentScoresRoom2, hasScoreMoreThan70);
-let scoreRoom3Result = atLeastFive(studentScoresRoom2, hasScoreMoreThan70);;
+let scoreRoom3Result = atLeastFive(studentScoresRoom3, hasScoreMoreThan70);
 
 console.log(scoreRoom1Result)
 console.log(scoreRoom2Result)
